@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'sonho',
+    loadChildren: () => import('./sonho/sonho.module').then( m => m.SonhoPageModule)
+  },
 ];
 
 @NgModule({

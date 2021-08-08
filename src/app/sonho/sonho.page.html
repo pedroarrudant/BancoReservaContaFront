@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Defina Seus Sonhos</ion-title>
+    <ion-button type="button" (click)="buttonClick()" fill="outline" slot="end">Adicionar Sonho</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let reserva of reservas" (click)="SelecionarReserva(reserva)">
+    <ion-item>
+      <ion-label>{{reserva.nome}}</ion-label>
+    </ion-item>
+  
+    <ion-card-content>
+      Saldo: R$ {{reserva.saldo}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
